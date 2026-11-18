@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Anti-Spoil GTA 6",
+  "version": "1.0.0",
+  "description": "Floute automatiquement tout ce qui peut te spoiler GTA 6 sur le web.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Anti-Spoil GTA 6"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

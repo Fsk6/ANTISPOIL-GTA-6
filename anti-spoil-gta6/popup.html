@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Anti-Spoil GTA 6</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { width: 320px; margin: 0; padding: 16px; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    label.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+    .hint { font-size: 12px; opacity: .7; margin: 12px 0 6px; }
+    textarea { width: 100%; box-sizing: border-box; height: 150px; resize: vertical; font: 13px/1.4 ui-monospace, Menlo, monospace; padding: 8px; border-radius: 8px; }
+    .actions { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+    button { font: inherit; padding: 8px 14px; border-radius: 8px; border: 1px solid #8884; cursor: pointer; }
+    button.primary { background: #e8436e; border-color: #e8436e; color: #fff; }
+    #status { font-size: 12px; opacity: .8; margin-left: auto; }
+  </style>
+</head>
+<body>
+  <h1>Anti-Spoil GTA 6</h1>
+  <label class="row"><span>Extension active</span><input type="checkbox" id="enabled"></label>
+  <label class="row"><span>Masquer les pages entières qui parlent du jeu</span><input type="checkbox" id="pageMode"></label>
+  <div class="hint">Mots à masquer (un par ligne). Ajoute des noms de persos, de lieux, etc.</div>
+  <textarea id="keywords" spellcheck="false"></textarea>
+  <div class="actions">
+    <button class="primary" id="save">Enregistrer</button>
+    <button id="reset">Par défaut</button>
+    <span id="status"></span>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
